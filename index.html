@@ -9,17 +9,35 @@
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to right, #fef9f9, #f3f7f6);
+      background-color: #fffdf9;
       margin: 0;
-      padding: 30px;
-      color: #3d3d3d;
+      padding: 0;
+      color: #444;
     }
 
-    h1 {
+    header {
+      background-color: #f9a8d4;
+      color: white;
+      padding: 20px;
       text-align: center;
-      color: #d75f8f;
-      font-size: 32px;
-      margin-bottom: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header span {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .subheader {
+      text-align: center;
+      font-size: 18px;
+      background-color: #fde68a;
+      padding: 10px;
+      color: #6b21a8;
     }
 
     .grid {
@@ -27,34 +45,34 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 20px;
-      padding-bottom: 20px;
+      padding: 30px;
     }
 
     .semestre {
-      background-color: #ffe8ef;
-      border: 2px solid #f4c4d9;
-      border-radius: 15px;
+      background-color: #fffbe6;
+      border: 2px solid #fcd34d;
+      border-radius: 12px;
       padding: 15px;
       min-width: 220px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .semestre h2 {
       text-align: center;
       font-size: 18px;
-      color: #d14c7d;
-      margin-bottom: 15px;
+      color: #d97706;
+      margin-bottom: 10px;
     }
 
     .materia {
-      margin: 10px 0;
-      padding: 10px 12px;
+      margin: 8px 0;
+      padding: 10px;
       background-color: #fff0f7;
       border-radius: 10px;
       cursor: pointer;
       position: relative;
-      border: 1px solid #f7d4e5;
+      border: 1px solid #fcd6e5;
       transition: background-color 0.3s, transform 0.2s;
     }
 
@@ -92,8 +110,10 @@
   </style>
 </head>
 <body>
-  <h1>Malla Curricular Fisioterapia - UAM</h1>
+  <header>♡ Malla Curricular Fisioterapia - UAM ♡</header>
+  <div class="subheader">Universidad Autónoma de Manizales</div>
   <div class="grid" id="malla"></div>
+
   <script>
     const materias = {
       'Primer semestre': [
